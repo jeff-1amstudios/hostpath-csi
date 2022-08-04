@@ -1,0 +1,14 @@
+csi:
+  plugin:
+    name: dummy-fuse-csi
+    image: dummy-fuse-csi:local
+
+    # Attempt to restore FUSE mounts. Doesn't work.
+    restoreMounts: false
+
+  registrar:
+    image: quay.io/k8scsi/csi-node-driver-registrar:v2.1.0
+
+# Override the default app name using nameOverride
+# nameOverride: some-other-name
+
